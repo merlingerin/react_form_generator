@@ -1,44 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# JSON Form Generator
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+-   ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   ### `npm run build`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`It's just a test realisation of JSON form generator.`
 
-### `npm run build`
+Application allows you to create HTML form from JSON file. Write/paste JSON config in `textarea` on the left side of home page. Right side of home page shows you hints/warrnings/errors of your JSON config;
+IF your JSON config is valid you could see generated form on the second tab - `RESULT`.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javasciprt
+    JSON FORMAT:
+    {
+        "form_items": [
+            {
+                "name": "name of input field",
+                "label": "label of input field",
+                "type": "type of input field"
+            }
+        ],
+        "form_title": "Form name",
+        "form_buttons": [{
+            "title": "Apply"
+        }]
+    }
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Form params
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| **Param**        | **Type** | Required |
+| ---------------- | -------- | -------- |
+| **form_items**   | _array_  | _yes_    |
+| **form_title**   | _string_ | _yes_    |
+| **form_buttons** | _array_  | _yes_    |
 
-### `npm run eject`
+### Form item params
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| **Param** | **Type** | Required |
+| --------- | -------- | -------- |
+| **name**  | _string_ | _yes_    |
+| **label** | _string_ | _yes_    |
+| **type**  | _string_ | _yes_    |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Form button params
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+| **Param** | **Type** | Required |
+| --------- | -------- | -------- |
+| **title** | _string_ | _yes_    |

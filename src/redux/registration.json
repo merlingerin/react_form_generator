@@ -1,0 +1,22 @@
+{
+	"form_items": [
+		{ "name": "firstname", "label": "firstname", "type": "text" },
+		{ "name": "lastname", "label": "lastname", "type": "text" },
+		{ "name": "password", "label": "password", "type": "password" },
+		{ "name": "repeat-password", "label": "Repeat password", "type": "password" },
+		{ "name": "gender-input", "label": "male", "type": "radio" },
+		{ "name": "gender-input", "label": "female", "type": "radio" },
+		{ "name": "birthday", "label": "Birthday", "type": "date" },
+		{ "name": "isAdult", "label": "I'am 18+", "type": "checkbox" },
+		{ "name": "short-description", "label": "About you", "type": "textarea" }
+	],
+	"form_title": "Registration form",
+	"form_buttons": [
+		{
+			"title": "Apply"
+		},
+		{
+			"title": "Cancel"
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"form_items": [
+		{ "name": "number-input", "label": "Number Field", "type": "number" },
+		{ "name": "text-input", "label": "Text Field", "type": "text" },
+		{ "name": "radio-input", "label": "Radio buttons", "type": "radio" },
+		{ "name": "radio-input", "label": "Radio buttons", "type": "radio" },
+		{ "name": "radio-input", "label": "Radio buttons", "type": "radio" },
+		{ "name": "Checkbox-input", "label": "Checkbox", "type": "checkbox" },
+		{ "name": "Date-input", "label": "Date Field", "type": "date" },
+		{ "name": "Textarea-input", "label": "Textarea ", "type": "textarea" }
+	],
+	"form_title": "My form",
+	"form_buttons": [
+		{
+			"title": "Apply"
+		},
+		{
+			"title": "Cancel"
+		}
+	]
+}
