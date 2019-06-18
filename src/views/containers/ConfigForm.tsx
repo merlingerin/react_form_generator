@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ErrorHighlighter from '../components/ErrorHighlighter';
 import JSONPretty from 'react-json-pretty';
 import { form_schema } from '../../schemas';
-import { get, map, toString } from 'lodash';
+import { get, map } from 'lodash';
 import Joi from '@hapi/joi';
 import { FormHint } from '../components/FormGenerator';
 import FormPreview from '../components/FormPreview';
@@ -29,7 +29,7 @@ const ConfigForm: React.FC<IProps> = ({
 }) => {
 	const [caretIndex, setIndex] = useState(null);
 
-	const _handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>): string => {
+	const _handleChangeConfigTextArea = (event: React.ChangeEvent<HTMLTextAreaElement>): string => {
 		setError('');
 		resetValidationError();
 
@@ -91,7 +91,7 @@ const ConfigForm: React.FC<IProps> = ({
 										placeholder="Write your config JSON ..."
 										cols={50}
 										rows={50}
-										onChange={_handleChange}
+										onChange={_handleChangeConfigTextArea}
 										value={config}
 										autoCorrect="false"
 									/>

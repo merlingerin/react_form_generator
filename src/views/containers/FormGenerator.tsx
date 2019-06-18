@@ -41,13 +41,13 @@ const renderFormElements = (text: string, error: string): JSX.Element | null => 
 					{form_items && renderFormInputsList(form_items)}
 					<div>{form_buttons && renderFormButtonsList(form_buttons)}</div>
 					{!form_items && (
-						<FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_items";`} />
+						<FormHint text={`Warning! ==> JSON form config doesn't have fields "form_items";`} />
 					)}
 					{!form_title && (
-						<FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_title";`} />
+						<FormHint text={`Warning! ==> JSON form config doesn't have fields "form_title";`} />
 					)}
 					{!form_buttons && (
-						<FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_buttons";`} />
+						<FormHint text={`Warning! ==> JSON form config doesn't have fields "form_buttons";`} />
 					)}
 				</>
 			);
