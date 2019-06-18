@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import ErrorHighlighter from '../components/ErrorHighlighter';
+import ErrorHighlighter from '../../components/ErrorHighlighter/ErrorHighlighter';
 import JSONPretty from 'react-json-pretty';
-import { form_schema } from '../../schemas';
+import { form_schema } from '../../../schemas';
 import { get, map } from 'lodash';
 import Joi from '@hapi/joi';
-import { FormHint } from '../components/FormGenerator';
-import FormPreview from '../components/FormPreview';
+import { FormHint } from '../../components/FormGenerator';
+import FormPreview from '../../components/FormPreview';
+import './index.css'
 
 interface IProps {
 	error: string;

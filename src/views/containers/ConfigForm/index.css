@@ -1,0 +1,11 @@
+.prettier-container {
+	font-size: 11px;
+}
+
+.textarea-container {
+	position: relative;
+}
+
+.config-form {
+	z-index: 1;
+}

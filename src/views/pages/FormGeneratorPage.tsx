@@ -1,7 +1,7 @@
 import React from 'react';
-import ConfigForm from '../containers/ConfigForm';
+import ConfigForm from '../containers/ConfigForm/ConfigForm';
 import FormGenerator from '../containers/FormGenerator';
-import Tabs from '../layouts/Tabs';
+import Tabs from '../layouts/Tabs/Tabs';
 
 const tabs = {
 	json: () => <ConfigForm />,

@@ -1,5 +1,5 @@
 import React from 'react';
-import InputFabric from '../components/InputFabric';
+import InputFabric from '../components/InputsFactory';
 import _ from 'lodash';
 import { connect } from 'react-redux';
 import { FormButton, FormHint, FormTitle } from '../components/FormGenerator';

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { map, toString } from 'lodash';
 import cn from 'classnames';
+import './index.css'
 
 interface IProps {
 	tabs: {

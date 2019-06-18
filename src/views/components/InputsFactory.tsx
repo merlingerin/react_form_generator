@@ -78,7 +78,7 @@ const createEmailInput: React.FC<IProps> = (params) => (
 	</div>
 );
 
-const InputFabric = {
+const InputsFactory= {
 	text: createTextInput,
 	password: createPasswordInput,
 	email: createEmailInput,
@@ -89,4 +89,4 @@ const InputFabric = {
 	textarea: createTextarea,
 };
 
-export default InputFabric;
+export default InputsFactory;
