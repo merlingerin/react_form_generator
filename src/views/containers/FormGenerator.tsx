@@ -40,9 +40,15 @@ const renderFormElements = (text: string, error: string): JSX.Element | null => 
 					{form_title && renderFormTitle(form_title)}
 					{form_items && renderFormInputsList(form_items)}
 					<div>{form_buttons && renderFormButtonsList(form_buttons)}</div>
-					{!form_items && <FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_items";`} />}
-					{!form_title && <FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_title";`} />}
-					{!form_buttons && <FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_buttons";`} />}
+					{!form_items && (
+						<FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_items";`} />
+					)}
+					{!form_title && (
+						<FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_title";`} />
+					)}
+					{!form_buttons && (
+						<FormHint text={`Warning! ==> JSON form config doesn\'t have fields "form_buttons";`} />
+					)}
 				</>
 			);
 		} catch (err) {
@@ -123,9 +129,9 @@ const renderFormButtonsList = (buttons: [] = []) =>
 | Render List of form inputs
 |--------------------------------------------------
 */
-const renderFormInputsList = (items: []) => _.map(items, item => renderFormInput(item));
+const renderFormInputsList = (items: []) => _.map(items, (item) => renderFormInput(item));
 
-const mapState = state => ({
+const mapState = (state) => ({
 	config: state.config,
 	error: state.error,
 });
@@ -137,5 +143,5 @@ const mapDispatch = ({ config: { setConfig }, error: { setError } }) => ({
 
 export default connect(
 	mapState,
-	mapDispatch,
+	mapDispatch
 )(FormGenerator);

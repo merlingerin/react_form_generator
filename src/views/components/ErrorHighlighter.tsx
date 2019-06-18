@@ -29,7 +29,8 @@ const inserError = (error: string, index: number): string => {
 		return '';
 	}
 
-	return `.error-hightlighter span:nth-child(${index}),.error-hightlighter span:nth-child(${index + 1}), .error-hightlighter span:nth-child(${index - 1}) {background-color: #c51;}`;
+	return `.error-hightlighter span:nth-child(${index}),.error-hightlighter span:nth-child(${index +
+		1}), .error-hightlighter span:nth-child(${index - 1}) {background-color: #c51;}`;
 };
 
 /**

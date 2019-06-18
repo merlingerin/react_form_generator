@@ -15,14 +15,17 @@ const Tabs: React.FC<IProps> = ({ tabs }) => {
 		return setIndex(idx);
 	};
 
-	const renderTab = key => tabs[key]();
+	const renderTab = (key) => tabs[key]();
 	return (
 		<div className="row">
 			<div className="col s12">
 				<ul className="tabs tabs-fixed-width tab-demo z-depth-1">
 					{map(tabs, (item, key) => (
 						<li key={key} className={`tab col s${Object.values(tabs).length}`}>
-							<div className={cn({ active: key === activeIndex })} onClick={() => _handleClick(toString(key))}>
+							<div
+								className={cn({ active: key === activeIndex })}
+								onClick={() => _handleClick(toString(key))}
+							>
 								{key.toUpperCase()}
 							</div>
 						</li>

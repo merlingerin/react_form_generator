@@ -26,8 +26,10 @@ const AboutPage = () => {
 						<code>It's just a test realisation of JSON form generator.</code>
 					</p>
 					<p>
-						Application allows you to create HTML form from JSON file. Write/paste JSON config in <code>textarea</code> on the left side of home page. Right side of home page shows you
-						hints/warrnings/errors of your JSON config; IF your JSON config is valid you could see generated form on the second tab - <code>RESULT</code>.
+						Application allows you to create HTML form from JSON file. Write/paste JSON config in{' '}
+						<code>textarea</code> on the left side of home page. Right side of home page shows you
+						hints/warrnings/errors of your JSON config; IF your JSON config is valid you could see
+						generated form on the second tab - <code>RESULT</code>.
 					</p>
 					<pre lang="javasciprt">
 						<code>

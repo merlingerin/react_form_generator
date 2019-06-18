@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
 export const FormHint: React.FC<{ text: string }> = ({ text }) => {
-  return <div className="yellow">{text}</div>;
+	return <div className="yellow">{text}</div>;
 };

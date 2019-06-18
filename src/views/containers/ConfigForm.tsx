@@ -18,7 +18,15 @@ interface IProps {
 	resetValidationError: () => any;
 }
 
-const ConfigForm: React.FC<IProps> = ({ error, config, setError, setConfig, setValidationError, resetValidationError, validationError }) => {
+const ConfigForm: React.FC<IProps> = ({
+	error,
+	config,
+	setError,
+	setConfig,
+	setValidationError,
+	resetValidationError,
+	validationError,
+}) => {
 	const [caretIndex, setIndex] = useState(null);
 
 	const _handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>): string => {
@@ -34,7 +42,11 @@ const ConfigForm: React.FC<IProps> = ({ error, config, setError, setConfig, setV
 		} = event;
 		if (value.length > 0) {
 			try {
-				const errors: [] = get(Joi.validate(JSON.parse(value), form_schema), 'error.details', undefined);
+				const errors: [] = get(
+					Joi.validate(JSON.parse(value), form_schema),
+					'error.details',
+					undefined
+				);
 
 				if (errors) {
 					setValidationError(errors);
@@ -90,7 +102,10 @@ const ConfigForm: React.FC<IProps> = ({ error, config, setError, setConfig, setV
 							<div className="col s6">
 								<div className="prettier-container">
 									{!error && !validationError && <JSONPretty id="json-pretty" data={config} />}
-									{validationError && map(validationError, (error: { message: string }) => <FormHint key={error.message} text={`Opps ==> ${error.message}`} />)}
+									{validationError &&
+										map(validationError, (error: { message: string }) => (
+											<FormHint key={error.message} text={`Opps ==> ${error.message}`} />
+										))}
 									{error && (
 										<div>
 											<code className="red">{error}</code>
@@ -106,13 +121,17 @@ const ConfigForm: React.FC<IProps> = ({ error, config, setError, setConfig, setV
 	);
 };
 
-const mapState = state => ({
+const mapState = (state) => ({
 	config: state.config,
 	error: state.error,
 	validationError: state.validationError,
 });
 
-const mapDispatch = ({ config: { setConfig }, error: { setError }, validationError: { setValidationError, resetValidationError } }) => ({
+const mapDispatch = ({
+	config: { setConfig },
+	error: { setError },
+	validationError: { setValidationError, resetValidationError },
+}) => ({
 	setConfig,
 	setValidationError,
 	setError,
@@ -121,5 +140,5 @@ const mapDispatch = ({ config: { setConfig }, error: { setError }, validationErr
 
 export default connect(
 	mapState,
-	mapDispatch,
+	mapDispatch
 )(ConfigForm);
